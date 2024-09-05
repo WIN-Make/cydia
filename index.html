@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Install Cydia</title>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #ffffff; /* White background */
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        }
+        .loading-container {
+            text-align: center;
+            color: #000000; /* Black text for contrast on white background */
+        }
+        .apple-logo {
+            width: 120px; /* Increased width */
+            height: 120px; /* Increased height */
+            margin-bottom: 30px;
+        }
+        .progress-bar {
+            width: 250px;
+            height: 6px;
+            background-color: rgba(0, 0, 0, 0.2); /* Light black progress bar background */
+            border-radius: 3px;
+            overflow: hidden;
+            margin: 0 auto 20px;
+        }
+        .progress {
+            width: 50%;
+            height: 100%;
+            background-color: #000000; /* Black progress bar */
+            border-radius: 3px 0 0 3px;
+            animation: load 20s infinite ease-in-out;
+        }
+        @keyframes load {
+            0% { width: 0%; }
+            100% { width: 100%; }
+        }
+        .status-text {
+            font-size: 14px;
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+    <div class="loading-container">
+        <img src="data:image/jpeg;base64,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" alt="Among Us Logo" class="apple-logo">
+        <div class="progress-bar">
+            <div class="progress"></div>
+        </div>
+        <div class="status-text">Installing Cydia.... please wait</div>
+    </div>
+</body>
+</html>
